@@ -1,20 +1,37 @@
-#include <string>
-using namespace std;
+#pragma once
 
-struct token {
-    int type;
-    string value;
-};
+#include <string>
+#include <vector>
+using namespace std;
 
 // Paradox Script Grammar
 
 enum token_type {
     END_OF_LINE,
-    STRING,
+
+    //STRING,
+
     IDENTIFIER,
+    
+    KEYWORD,
 
-    OPEN_PAREN,
-    CLOSE_PAREN,
+    PUNCTUATION,
 
-    EQUALS,
+    OPERATOR,
+
+    //NUM,
+
+    COMMENT,
+
+    WHITESPACE
 };
+
+struct token {
+    token_type type;
+    string value;
+};
+
+string stringify_file(string txt_file, bool add_line_breaks = false);
+
+// Lexer function returns text as list of tokens
+vector<token> tokenize(string txt);
