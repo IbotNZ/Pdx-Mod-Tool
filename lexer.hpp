@@ -19,7 +19,7 @@ enum token_type {
 
     OPERATOR,
 
-    //NUM,
+    NUM,
 
     COMMENT,
 
