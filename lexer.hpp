@@ -34,4 +34,4 @@ struct token {
 string stringify_file(string txt_file, bool add_line_breaks = false);
 
 // Lexer function returns text as list of tokens
-vector<token> tokenize(string txt);
+vector<token> tokenize(string txt_file);
